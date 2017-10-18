@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="client-book">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <title>Book</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/lib/angular.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/controllers/book-controller.js"></script>
     </head>
-    <body>
+    <body ng-controller="BookController">
         <div class="container">
-            <h1 class="text-center">Books</h1>
+            <div class="jumbotron">
+                <h1 class="text-center">Books</h1>
+            </div>
+
+            <div ng-repeat="book in books" class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>{{book.title}}</h3>
+                </div>
+                <div class="panel-heading">
+                    <h3>{{book.description}}</h3>
+                </div>
+                <div class="panel-heading">
+                    <h3>{{book.body}}</h3>
+                </div>
+                <div class="panel-heading">
+                    <h3>{{book.author}}</h3>
+                </div>
+            </div>
         </div>        
     </body>
 </html>
