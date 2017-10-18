@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'rack-cors', :require => 'rack/cors'
 
-gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+gem 'faker', '~> 1.6', '>= 1.6.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -43,6 +43,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+  gem 'factory_girl_rails', '~> 4.5'
 end
 
 group :development do
