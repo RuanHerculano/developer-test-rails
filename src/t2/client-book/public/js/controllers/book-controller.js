@@ -2,8 +2,14 @@ angular.module('client-book').controller('BookController', function($scope, $htt
 	$scope.book = {};
 
 	$scope.submit = function() {
-		console.log($scope.book);
-		$http.post('http://localhost:3000/books', $scope.book)
+		$http({
+		  method: 'POST',
+		  url: 'http://localhost:3000/books',
+		  data: $scope.book,
+		  headers: {
+		    'Access-Control-Allow-Origin': '*',
+		  }
+		})
 		.success(function(response) {
 			console.log('Foto cadastrada com sucesso!');
 			console.log(response);
