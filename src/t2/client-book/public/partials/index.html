@@ -1,0 +1,24 @@
+<div class="jumbotron">
+    <h1 class="text-center">Books</h1>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Descrilção</th>
+            <th>Corpo</th>
+            <th>Autor</th>
+        </tr>
+    </thead>
+    <tbody ng-repeat="book in books">
+        <tr>
+            <td>{{book.title}}</td>
+            <td>{{book.description}}</td>
+            <td>{{book.body}}</td>
+            <td>{{book.author}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<a class="button" href="books/new">Novo</a>
