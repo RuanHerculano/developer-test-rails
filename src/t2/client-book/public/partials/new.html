@@ -1,1 +1,62 @@
-asdasdasdasdasd
+<div class="page-header text-center">
+    <h1>CRIAR NOVO LIVRO</h1>
+</div>
+
+<form novalidate name="formulary" class="row" ng-submit="submit()">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Título</label>
+            <input ng-model="book.title" name="title" class="form-control" required ng-maxlength="20">    
+            <span ng-show="formulary.$submitted && formulary.title.$error.required"  class="form-control alert-danger">
+                Título é Obrigatório
+            </span>
+            <span ng-show="formulary.$submitted && formulary.title.$error.maxlength"  class="form-control alert-danger">
+                Título pode ter no máximo 20 caractéres
+            </span>
+        </div>
+        
+        <div class="form-group">
+            <label>Descrição</label>
+            <input ng-model="book.description" name="description" class="form-control" required ng-maxlength="90">
+            <span ng-show="formulary.$submitted && formulary.description.$error.required" class="form-control alert-danger">
+                Descrição é Obrigatória
+            </span>
+            <span ng-show="formulary.$submitted && formulary.description.$error.maxlength"  class="form-control alert-danger">
+                Descrição pode ter no máximo 90 caractéres
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label>Body</label>
+            <textarea  ng-model="book.body" name="body" class="form-control" required ng-maxlength="290">
+            </textarea>
+            <span ng-show="formulary.$submitted && formulary.body.$error.required" class="form-control alert-danger">
+                Body é Obrigatório
+            </span>
+            <span ng-show="formulary.$submitted && formulary.body.$error.maxlength"  class="form-control alert-danger">
+                Body pode ter no máximo 290 caractéres
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label>Autor</label>
+            <input ng-model="book.author" name="author" class="form-control" required ng-maxlength="90">    
+            <span ng-show="formulary.$submitted && formulary.author.$error.required" class="form-control alert-danger">
+                Autor é Obrigatório
+            </span>
+            <span ng-show="formulary.$submitted && formulary.author.$error.maxlength"  class="form-control alert-danger">
+                Autor pode ter no máximo 90 caractéres
+            </span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Salvar
+        </button>
+         <a href="/books" class="btn btn-primary">Voltar</a>
+        <hr>
+    </div>
+    <!-- <div class="col-md-6">
+        <minha-foto></minha-foto>
+    </div> -->
+</form>
+

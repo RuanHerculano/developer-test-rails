@@ -4,12 +4,12 @@ angular.module('client-book', ['ngRoute'])
 
 	$routeProvider.when('/books', {
 		templateUrl: 'partials/index.html',
-		controller: 'BookController'
+		controller: 'BooksController'
 	});
 
 	$routeProvider.when('/books/new', {
 		templateUrl: 'partials/new.html',
-		// controller: 'BookController'
+		controller: 'BookController'
 	});
 
 	$routeProvider.otherwise({ redirectTo: 'books'});
