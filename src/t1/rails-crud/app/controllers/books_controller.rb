@@ -3,6 +3,12 @@ class BooksController < ApplicationController
 
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
+  before_action :cors_set_access_control_headers
+
+  def cors_set_access_control_headers
+    headers['Access-Control-Allow-Origin'] = '*'
+  end
+
   def index
     @books = Book.all
 
@@ -50,7 +56,7 @@ class BooksController < ApplicationController
     @book.destroy
     respond_to do |format|
       format.html { redirect_to books_url, notice: 'Book was successfully destroyed.' }
-      format.json { head :no_content }
+      format.json { status :ok, notice: 'Book was successfully destroyed.' }
     end
   end
 

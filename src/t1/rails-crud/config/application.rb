@@ -16,7 +16,7 @@ module RailsCrud
         origins '*'
         resource '*',
           :headers => :any,
-          :methods => [:post, :get, :put, :patch, :options],
+          :methods => [:post, :get, :put, :patch, :options, :delete],
           :max_age => 15
       end
     end

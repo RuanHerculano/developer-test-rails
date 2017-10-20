@@ -1,5 +1,6 @@
 angular.module('client-book').controller('BookController', function($scope, $http) {
 	$scope.book = {};
+	$scope.message = '';
 
 	$scope.submit = function() {
 		$http({
@@ -11,11 +12,11 @@ angular.module('client-book').controller('BookController', function($scope, $htt
 		  }
 		})
 		.success(function(response) {
-			console.log('Foto cadastrada com sucesso!');
-			console.log(response);
+			$scope.book = {};
+			$scope.message = 'Livro cadastrado com sucesso!';
 		})
 		.error(function(error) {
-			console.log(error);
+			$scope.message = 'Não foi possível cadastrar o livro';
 		});
 	};
 });
