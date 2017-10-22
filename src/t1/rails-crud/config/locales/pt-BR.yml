@@ -1,0 +1,21 @@
+pt-BR:
+  default:
+    actions:
+      name: 'Ações'
+      show: 'Visualizar'
+      edit: 'Editar'
+      destroy:
+        action: 'Remover'
+        confirm: 'Você tem certeza?'
+      new: 'Novo'
+      back: 'Voltar'
+  books:
+    name: 'Livros'
+    fields:
+      title: 'Título'
+      description: 'Descrição'
+      body: 'corpo'
+      author: 'Autor'
+    actions:
+      edit: 'Editar livro'
+      new: 'Novo livro'
