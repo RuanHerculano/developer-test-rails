@@ -1,27 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Livro</h1>
+<h1><%= I18n.t('books.name') %></h1>
 
 <p>
-  <strong>Title:</strong>
+  <strong><%= I18n.t('books.fields.title') %>:</strong>
   <%= @book.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= I18n.t('books.fields.description') %>:</strong>
   <%= @book.description %>
 </p>
 
 
 <p>
-  <strong>Corpo:</strong>
+  <strong><%= I18n.t('books.fields.body') %>:</strong>
   <%= @book.body %>
 </p>
 
 <p>
-  <strong>Author:</strong>
+  <strong><%= I18n.t('books.fields.author') %>:</strong>
   <%= @book.author %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to I18n.t('default.actions.edit'), edit_book_path(@book) %> |
+<%= link_to I18n.t('default.actions.back'), books_path %>
