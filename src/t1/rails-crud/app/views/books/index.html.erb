@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Books</h1>
+<h1><%= I18n.t('books.name') %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>title</th>
-      <th>description</th>
-      <th>body</th>
-      <th>author</th>
-      <th>actions</th>
+      <th><%= I18n.t('books.fields.title') %></th>
+      <th><%= I18n.t('books.fields.description') %></th>
+      <th><%= I18n.t('books.fields.body') %></th>
+      <th><%= I18n.t('books.fields.author') %></th>
+      <th><%= I18n.t('default.actions.name') %></th>
     </tr>
   </thead>
   <tbody>
@@ -19,9 +19,9 @@
         <td><%= book.description %></td>
         <td><%= book.body %></td>
         <td><%= book.author %></td>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to I18n.t('default.actions.show'), book %></td>
+        <td><%= link_to I18n.t('default.actions.edit'), edit_book_path(book) %></td>
+        <td><%= link_to I18n.t('default.actions.destroy.action'), book, method: :delete, data: { confirm: I18n.t('default.actions.destroy.confirm') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Book', new_book_path %>
+<%= link_to I18n.t('default.actions.new'), new_book_path %>
