@@ -18,7 +18,12 @@ class BooksController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @book }
+    end
+  end
 
   def new
     @book = Book.new
@@ -56,7 +61,7 @@ class BooksController < ApplicationController
     @book.destroy
     respond_to do |format|
       format.html { redirect_to books_url, notice: 'Book was successfully destroyed.' }
-      format.json { status :ok, notice: 'Book was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 
