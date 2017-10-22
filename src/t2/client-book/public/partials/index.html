@@ -2,6 +2,10 @@
     <h1 class="text-center">Books</h1>
 </div>
 
+<p class="alert alert-info" ng-show="message.length">
+    {{message}}
+</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -18,10 +22,10 @@
             <td>{{book.body}}</td>
             <td>{{book.author}}</td>
             <td>
-                <a href="btn btn-primary">Editar</a>
+                <a href="books/edit/{{book.id}}" class="btn btn-primary btn-block">Editar</a>
             </td>
             <td>
-                <button ng-click="destroy(book.id)" class="btn btn-danger">Excluir</button>
+                <button ng-click="destroy(book)" class="btn btn-danger">Excluir</button>
             </td>
         </tr>
     </tbody>

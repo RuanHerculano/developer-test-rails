@@ -14,4 +14,8 @@ angular.module('client-book', ['ngRoute'])
 		controller: 'BookController'
 	});
 
+	$routeProvider.when('/books/edit/:bookId', {
+		templateUrl: 'partials/new.html',
+		controller: 'BookController'
+	});
 });
