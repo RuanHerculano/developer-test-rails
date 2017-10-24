@@ -31,15 +31,15 @@ em nível preparatório para a próxima branch release.
 **feature**: Nessa branch são desenvolvidas as novas features (Funcionalidades).
 
 ### O fluxo de desenvolvimento:
-  
-1. Uma nova branch feature é criada, ela adiciona ou melhora uma funcionalidade no sistema.
-2. Quando a funcionalidade está pronta, é aberto um PR da branch feature criada para branch development.
-3. Quando o PR revebe duas aprovações essa branch é mergeada para a branch development.
-4. Depois de um tempo definido pela organização, a partir dessa branch development,
-é gerado a branch release.
-5. Em determinado momento, essa branch release é mergeada para a branch master.
+> ##### Implementação de uma nova funcionalidade e/ou melhoria 
+> 1. Uma nova branch feature é criada, ela adiciona ou melhora uma funcionalidade no sistema.
+> 2. Quando a funcionalidade está pronta, é aberto um PR da branch feature criada para branch development.
+> 3. Quando o PR revebe duas aprovações essa branch é mergeada para a branch development.
+> 4. Depois de um tempo definido pela organização, a partir dessa branch development,
+> é gerado a branch release.
+> 5. Em determinado momento, essa branch release é mergeada para a branch master.
 (Dependendo da organização, podem haver processos que antecedem esse merge).
-6. O fluxo está completo.
+> 6. O fluxo está completo.
 
 ### Correção de bugs  
 #### Quando um bug for identificado na branch master
@@ -62,7 +62,7 @@ em nível preparatório para a próxima branch release.
 > 3. Quando for corrigido o bug, é aberto um PR com a correção para o bug.
 > 4. Quando esse PR recebe duas aprovações essa correção é mergeada para a branch release.	
 
-##### Caso não
+> ##### Caso não
 > 1. A funcionalidade que introduzia esse erro é retirada da branch de release.
 > 2. Uma branch hotfix é criada a partir da branch release.
 > 3. Quando for corrigido o bug, é aberto um PR com a correção para o bug.
