@@ -19,8 +19,10 @@ Boa sorte!
 A documentação apenas complementa o código, não explica o que ele faz.
 
 ### 2 Descreva o passo a passo de um workflow git
-  Bem a melhor forma que achei para explicar é de acordo com a seguinte imagem
+
+Bem a melhor forma que achei para explicar é de acordo com a seguinte imagem
 [![git-workflow.png](https://s1.postimg.org/7urmq8mob3/git-workflow.png)](https://postimg.org/image/6dlhohijkb/)
+
 #### Explicando as branches:
 
   **master**: A branch master tem a versão do código de produção, o código estável no qual os usuários
@@ -41,7 +43,7 @@ A documentação apenas complementa o código, não explica o que ele faz.
 
   **feature**: Nessa branch são desenvolvidas as novas features (Funcionalidades).
 
-  #### O fluxo de desenvolvimento:
+#### O fluxo de desenvolvimento:
   
   1. Uma nova branch feature é criada, ela adiciona ou melhora uma funcionalidade no sistema.
   2. Quando a funcionalidade está pronta, é aberto um PR da branch feature criada para branch development.
@@ -52,32 +54,32 @@ A documentação apenas complementa o código, não explica o que ele faz.
   (Dependendo da organização, podem haver processos que antecedem esse merge).
   6. O fluxo está completo.
   
-  #### Correção de bugs:
+#### Correção de bugs  
+  ##### Quando um bug for identificado na branch master
+    ###### Caso a solução seja simples e não impeça o usuário de acessar o sistema.
+      1. Uma branch hotfix é criada a partir da branch master
+      2. Na branch supracitada é feita a correção para o bug.
+      3. Quando for corrigido o bug, é aberto um PR com a correção para o bug.
+      4. Quando esse PR recebe duas aprovações essa correção é mergeada para a branch master.
+
+    ###### Caso seja um bug crítico que quebra a aplicação e impede o usuário de acessar o sistema.
+      1. Dar um RollBack para a release anterior
+      2. Uma branch hotfix é criada a partir da branch master
+      3. Quando for corrigido o bug, é aberto um PR com a correção para o bug.
+      4. Quando esse PR recebe duas aprovações essa correção é mergeada para a branch development.
+
+  ##### Quando um bug for identificado na branch release
+    ###### Caso seja uma solução rápida de ser resolvida, e que pode ser consertada antes que a branch release seja mergeada pra naster:
+      1. Uma branch hotfix é criada a partir da branch release
+      2. Na branch supracitada é feita a correção para o bug.
+      3. Quando for corrigido o bug, é aberto um PR com a correção para o bug.
+      4. Quando esse PR recebe duas aprovações essa correção é mergeada para a branch release.	
   
-  Quando um bug for identificado na branch master.
-    Caso a solução seja simples e não impeça o usuário de acessar o sistema.
-      1 Uma branch hotfix é criada a partir da branch master
-      2 Na branch supracitada é feita a correção para o bug.
-      3 Quando for corrigido o bug, é aberto um PR com a correção para o bug.
-      4 Quando esse PR recebe duas aprovações essa correção é mergeada para a branch master.
-
-    Caso seja um bug crítico que quebra a aplicação e impede o usuário de acessar o sistema.
-      1 Dar um RollBack para a release anterior
-      2 Uma branch hotfix é criada a partir da branch master
-      3 Quando for corrigido o bug, é aberto um PR com a correção para o bug.
-      4 Quando esse PR recebe duas aprovações essa correção é mergeada para a branch development.
-
-  Caso o bug seja encontrado na branch de release:
-    Caso seja uma solução rápida de ser resolvida, e que pode ser consertada antes que a branch release seja mergeada pra naster:
-      1 Uma branch hotfix é criada a partir da branch release
-      2 Na branch supracitada é feita a correção para o bug.
-      3 Quando for corrigido o bug, é aberto um PR com a correção para o bug.
-      4 Quando esse PR recebe duas aprovações essa correção é mergeada para a branch release.	
-    Caso não:
-      1 A funcionalidade que introduzia esse erro é retirada da branch de release.
-      2 Uma branch hotfix é criada a partir da branch release
-      3 Quando for corrigido o bug, é aberto um PR com a correção para o bug.
-      4 Quando esse PR recebe duas aprovações essa correção é mergeada para a branch development.
+    ###### Caso não
+      1. A funcionalidade que introduzia esse erro é retirada da branch de release.
+      2. Uma branch hotfix é criada a partir da branch release
+      3. Quando for corrigido o bug, é aberto um PR com a correção para o bug.
+      4. Quando esse PR recebe duas aprovações essa correção é mergeada para a branch development.
 
 ### 3 Qual o seu sistema operacional favorito? Justifique.
 Sistemas que tem a base Debian, devido a documentação deles ser mais ampla,
@@ -91,7 +93,7 @@ Rails. O processo de configuração é bem simples (convenção é melhor que co
 na implementação do desenvolvedor já vem implementadas de uma forma mais fácil, além de ter uma excelente documentação.
 
 ### 5 Qual a sua linguagem de programação favorita? Justifique.
-Ruby. Fácil de aprenser, fácil de debugar, fácil de entender o código que o coleguinha fez.
+Ruby. Fácil de aprenser, fácil de debugar, e fácil de entender o código que o coleguinha fez.
 
 ### 6 Qual a sua pretenção salarial?
 5.900,00
