@@ -1,18 +1,5 @@
 # Teste 5
 
-Responda as seguintes perguntas:
-
-+ Para você, o que é o código ideal?
-+ Descreva o passo a passo de um workflow git
-+ Qual o seu sistema operacional favorito? Justifique.
-+ Qual o seu framework favorito? Justifique.
-+ Qual a sua linguagem de programação favorita? Justifique.
-+ Qual a sua pretenção salarial?
-+ Coloque aqui o link para seu github para que possamos avaliar qualquer projeto anterior seu ou contribuição com projetos de código aberto.
-
-Boa sorte!
-
-
 ### 1 Para você, o que é o código ideal?
 
 É o código auto explicável, que é fácil de ler, e dispensa documentação.
