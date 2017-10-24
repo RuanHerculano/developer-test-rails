@@ -20,11 +20,11 @@ A documentação apenas complementa o código, não explica o que ele faz.
 
 ### 2 Descreva o passo a passo de um workflow git
   Bem a melhor forma que achei para explicar é de acordo com a seguinte imagem
+[![git-workflow.png](https://s1.postimg.org/7urmq8mob3/git-workflow.png)](https://postimg.org/image/6dlhohijkb/)
+#### Explicando as branches:
 
-  #### Explicando as branches:
-
-  **master**: A branch master tem a versão do código de produção, o código estável no qual os usuários]
-  que usam o sistema vão usufruir dele.
+  **master**: A branch master tem a versão do código de produção, o código estável no qual os usuários
+  vão usufruir dele.
 
   **hotfix**: Nessa branch são feitas as correções de erros não mapeadas pelos testes unitários,
   testes de integração e testes manuais que acabaram indo parar na branch master,
@@ -44,7 +44,7 @@ A documentação apenas complementa o código, não explica o que ele faz.
   #### O fluxo de desenvolvimento:
   
   1. Uma nova branch feature é criada, ela adiciona ou melhora uma funcionalidade no sistema.
-  2. Quando a funcionalidade está pronta, é aberto um PR da brach feature criada para branch development.
+  2. Quando a funcionalidade está pronta, é aberto um PR da branch feature criada para branch development.
   3. Quando o PR revebe duas aprovações essa branch é mergeada para a branch development.
   4. Depois de um tempo definido pela organização, a partir dessa branch development,
   é gerado a branch release.
@@ -56,14 +56,14 @@ A documentação apenas complementa o código, não explica o que ele faz.
   
   Quando um bug for identificado na branch master.
     Caso a solução seja simples e não impeça o usuário de acessar o sistema.
-      1 Uma branch hotfix é criada a partir da brach master
+      1 Uma branch hotfix é criada a partir da branch master
       2 Na branch supracitada é feita a correção para o bug.
       3 Quando for corrigido o bug, é aberto um PR com a correção para o bug.
       4 Quando esse PR recebe duas aprovações essa correção é mergeada para a branch master.
 
     Caso seja um bug crítico que quebra a aplicação e impede o usuário de acessar o sistema.
       1 Dar um RollBack para a release anterior
-      2 Uma branch hotfix é criada a partir da brach master
+      2 Uma branch hotfix é criada a partir da branch master
       3 Quando for corrigido o bug, é aberto um PR com a correção para o bug.
       4 Quando esse PR recebe duas aprovações essa correção é mergeada para a branch development.
 
@@ -75,7 +75,7 @@ A documentação apenas complementa o código, não explica o que ele faz.
       4 Quando esse PR recebe duas aprovações essa correção é mergeada para a branch release.	
     Caso não:
       1 A funcionalidade que introduzia esse erro é retirada da branch de release.
-      2 Uma branch hotfix é criada a partir da brach release
+      2 Uma branch hotfix é criada a partir da branch release
       3 Quando for corrigido o bug, é aberto um PR com a correção para o bug.
       4 Quando esse PR recebe duas aprovações essa correção é mergeada para a branch development.
 
