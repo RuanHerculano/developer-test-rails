@@ -1,4 +1,4 @@
-angular.module('client-book').controller('BookController', function($scope, $http, $routeParams) {
+angular.module('client-book').controller('BookController', function($scope, $http, $routeParams, $timeout) {
 	$scope.book = {};
 	$scope.message = '';
 	var url = 'http://localhost:3000/books';
@@ -54,6 +54,12 @@ angular.module('client-book').controller('BookController', function($scope, $htt
 		show();
 	}
 
+	function notReloadPageForm() {
+		$timeout(function() {
+	      $scope.formulary.$submitted = false;
+	    });
+	};
+
 	$scope.submit = function() {
 		if ($scope.formulary.$valid) {
 			if ($scope.book.id) {
@@ -62,5 +68,6 @@ angular.module('client-book').controller('BookController', function($scope, $htt
 				create();
 			}
 		}
+		notReloadPageForm();
 	};
 });
