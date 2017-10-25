@@ -139,7 +139,7 @@ RSpec.describe BooksController, type: :controller do
 
       it "does not change create_book's attributes" do
         create_book.reload
-        expect(create_book.title).to eq('MyString')
+        expect(create_book.body).to eq('body')
         expect(create_book.description).not_to eq('new description')
       end
 
